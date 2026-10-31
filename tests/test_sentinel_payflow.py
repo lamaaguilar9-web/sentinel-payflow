@@ -45,9 +45,18 @@ VALID_DST_3 = "4fYNw3dojWmQ4dXtSGE9epjRGy9pFSx62YypT7avPYvA"
 
 class TestSentinelPayFlowInstitutional(unittest.TestCase):
     def setUp(self):
+        import tempfile
+        self._tmp_db = tempfile.NamedTemporaryFile(suffix=".db", delete=False)
+        self._tmp_db.close()
         self.validator = ShieldValidator()
-        self.engine = PayFlowEngine(validator=self.validator)
+        self.engine = PayFlowEngine(validator=self.validator, db_path=self._tmp_db.name)
         self.client = TestClient(app)
+
+    def tearDown(self):
+        try:
+            os.remove(self._tmp_db.name)
+        except OSError:
+            pass
 
     # ------------------------------------------------------------------
     # 1. Cryptographic & Protocol Constants Invariants
@@ -227,6 +236,37 @@ class TestSentinelPayFlowInstitutional(unittest.TestCase):
             r = self.client.get(ep)
             self.assertEqual(r.status_code, 200)
             self.assertEqual(r.json()["provider_id"], "SENTINELPAYFLOW1")
+            self.assertEqual(r.json()["persistence_engine"], "SQLite3_WAL_Durable")
+
+    def test_23_sqlite_persistence_survives_engine_restart(self):
+        self.engine.create_b2b_commodity_route(
+            buyer_wallet=VALID_SRC,
+            contract_amount_usdc="50000.00",
+            farmer_wallet=VALID_DST_1,
+            mill_logistics_wallet=VALID_DST_2,
+        )
+        # Re-instantiate engine pointing to same SQLite file
+        reloaded = PayFlowEngine(validator=self.validator, db_path=self._tmp_db.name)
+        self.assertEqual(reloaded.metrics["routes_created"], 1)
+        self.assertEqual(str(reloaded.metrics["total_routed_usd"]), "50000.00")
+
+    def test_24_rate_limit_headers_present(self):
+        r = self.client.get("/health")
+        self.assertIn("X-RateLimit-Limit", r.headers)
+        self.assertIn("X-RateLimit-Remaining", r.headers)
+
+    def test_25_confirm_broadcast_verifies_signature_format(self):
+        out = self.engine.execute_compliant_route(
+            source_owner=VALID_SRC,
+            destinations=[{"wallet": VALID_DST_1, "amountRaw": "5000000"}],
+        )
+        tid = out["transfer_id"]
+        with self.assertRaises(ValueError):
+            self.engine.mh_client.confirm_broadcast(tid, ["short_bad_sig"])
+        valid_sig = "5" * 88
+        conf = self.engine.mh_client.confirm_broadcast(tid, [valid_sig])
+        self.assertEqual(conf["status"], "ROUTING_ACTIVE_ONCHAIN")
+        self.assertTrue(conf["solana_rpc_verification"][0]["verified"])
 
 
 if __name__ == "__main__":

@@ -5,12 +5,13 @@ MultiHopper programmable multi-hop route orchestration, and live traction metric
 """
 import os
 import time
+from collections import deque
 from decimal import Decimal
-from typing import Any, Dict, List, Optional
+from typing import Any, Deque, Dict, List, Optional
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse, HTMLResponse
+from fastapi.responses import FileResponse, HTMLResponse, JSONResponse
 from pydantic import BaseModel, Field
 
 from . import __version__
@@ -42,6 +43,35 @@ app.add_middleware(
     allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["*"],
 )
+
+# Sliding-window in-memory rate limiter (120 req / 60s per client IP)
+RATE_LIMIT_MAX_REQ = int(os.getenv("SENTINEL_RATE_LIMIT_PER_MIN", "120"))
+RATE_LIMIT_WINDOW_SEC = 60.0
+_ip_windows: Dict[str, Deque[float]] = {}
+
+
+@app.middleware("http")
+async def institutional_rate_limit_middleware(request: Request, call_next):
+    client_ip = (request.client.host if request.client else "127.0.0.1") or "127.0.0.1"
+    now = time.monotonic()
+    q = _ip_windows.setdefault(client_ip, deque())
+    while q and (now - q[0]) > RATE_LIMIT_WINDOW_SEC:
+        q.popleft()
+    if len(q) >= RATE_LIMIT_MAX_REQ:
+        return JSONResponse(
+            status_code=429,
+            content={"detail": "Rate limit exceeded. Try again in 60 seconds."},
+            headers={
+                "X-RateLimit-Limit": str(RATE_LIMIT_MAX_REQ),
+                "X-RateLimit-Remaining": "0",
+            },
+        )
+    q.append(now)
+    response: Response = await call_next(request)
+    response.headers["X-RateLimit-Limit"] = str(RATE_LIMIT_MAX_REQ)
+    response.headers["X-RateLimit-Remaining"] = str(max(0, RATE_LIMIT_MAX_REQ - len(q)))
+    return response
+
 
 engine = PayFlowEngine()
 STATIC_INDEX = os.path.join(os.path.dirname(__file__), "static", "index.html")
