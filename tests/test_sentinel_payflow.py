@@ -222,6 +222,12 @@ class TestSentinelPayFlowInstitutional(unittest.TestCase):
         self.assertEqual(r.status_code, 200)
         self.assertIn("Sentinel PayFlow", r.text)
 
+    def test_22_traction_and_stats_endpoints(self):
+        for ep in ["/api/v1/stats", "/api/v1/traction"]:
+            r = self.client.get(ep)
+            self.assertEqual(r.status_code, 200)
+            self.assertEqual(r.json()["provider_id"], "SENTINELPAYFLOW1")
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

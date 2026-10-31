@@ -249,5 +249,6 @@ def confirm_route_broadcast(transfer_id: str, req: ConfirmBroadcastRequest) -> D
 
 
 @app.get("/api/v1/stats")
+@app.get("/api/v1/traction")
 def get_stats() -> Dict[str, Any]:
     return engine.get_traction_summary()

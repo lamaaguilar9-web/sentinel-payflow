@@ -28,6 +28,7 @@ MULTIHOPPER_CORE_PROGRAM_ID = "3jLoS2wbNgtKzieUUxwg6Xhdv6gbZkHDtPWA9ZAgspFh"
 # Sentinel Fleet 16-Byte Integrator Identity (provider_id: Option<[u8; 16]>)
 # Tracks lifetime 0.25% revenue share ($2,500 per $1M routed) via FeeSchedule PDA
 # ============================================================================
+# DEFAULT MUST BE EXACTLY 16 UTF-8 BYTES for on-chain RouteConfig Option<[u8; 16]>
 SENTINEL_PROVIDER_ID_STR = os.getenv("SENTINEL_PROVIDER_ID", "SENTINELPAYFLOW1")
 # Guarantee exact 16-byte width for on-chain RouteConfig [u8; 16] serialization
 _raw_pid = SENTINEL_PROVIDER_ID_STR.encode("utf-8")
