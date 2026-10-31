@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![MultiHopper Core](https://img.shields.io/badge/MultiHopper-3jLoS2wb...gspFh-38bdf8.svg)](https://multihopper.com)
 [![Sanctions Shield](https://img.shields.io/badge/Tornado%20%2B%20OFAC%20DB-175%20Entities%20(O(1))-10b981.svg)](#dual-layer-institutional-compliance-architecture)
-[![Tests](https://img.shields.io/badge/Tests-21%2F21%20Passing%20(0.12s)-brightgreen.svg)](tests/test_sentinel_payflow.py)
+[![Tests](https://img.shields.io/badge/Tests-25%2F25%20Passing%20(CI%20Verified)-brightgreen.svg)](tests/test_sentinel_payflow.py)
 [![Custody](https://img.shields.io/badge/Custody-100%25%20Non--Custodial-purple.svg)](#non-custodial-security-guarantees)
 
 > **Built for the MultiHopper Build & Route Challenge on Superteam Earn.**  
@@ -23,6 +23,16 @@ Enterprises, export cooperatives, and Web3 teams moving real USDC volume on Sola
 - **Layer-0 Tornado Cash & OFAC Pre-Flight Shield (`<0.2 ms`):** Before a route ever reaches MultiHopper's API (and MultiHopper's native TRM Labs screening), Sentinel PayFlow performs deterministic `O(1)` screening across **175 cryptographically verified entities** (**155 Tornado Cash pools/routers/OFAC SDN EVM addresses** for cross-chain bridge origins + **20 Solana OFAC/Exploiter/Drainer clusters**) and issues a **`CleanPass` SHA-256 Attestation**.
 - **Strict Genuine-Usage & Anti-Farming Enforcement:** Automatically rejects circular self-routing (`sourceOwner in destinations`), duplicate Sybil splits, dust farming, and EVM/Base58 key mismatches.
 - **Exact `u64` Conservation Invariant:** Uses fixed-point `Decimal` integer basis-point math (`split_raw_by_bps`) with deterministic remainder assignment, guaranteeing `sum(destinations[i].amountRaw) == amountRaw` down to a single micro-USDC (`10^-6`).
+
+---
+
+## 🖼️ Live Interactive Judge Console (1080p Walkthrough)
+
+| 1. Institutional Dashboard (SENTINELPAYFLOW1) | 2. RWA Agro Coffee Export (CLEANPASS_APPROVED) |
+| :---: | :---: |
+| ![Dashboard](docs/screenshots/01_dashboard_provider_id.png) | ![Agro Export](docs/screenshots/02_agro_coffee_export.png) |
+| **3. Confidential Web3 Payroll Batch (5 Hops)** | **4. Sub-0.2ms Tornado Cash / OFAC Fail-Closed Block** |
+| ![Payroll](docs/screenshots/03_confidential_payroll.png) | ![Tornado Block](docs/screenshots/04_tornado_cash_block.png) |
 
 ---
 
