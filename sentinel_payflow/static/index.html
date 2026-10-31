@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sentinel PayFlow — Institutional MultiHopper Programmable Router &amp; AML Shield</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --bg: #060913;
+      --panel: #0e1526;
+      --panel-alt: #131c31;
+      --border: #1e2d4a;
+      --accent: #38bdf8;
+      --emerald: #10b981;
+      --danger: #ef4444;
+      --amber: #f59e0b;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+      background: radial-gradient(circle at top right, #0f1f3d 0%, var(--bg) 55%);
+      color: var(--text);
+      padding: 24px 18px 60px;
+      line-height: 1.5;
+    }
+    .wrap { max-width: 1180px; margin: 0 auto; }
+    .topbar {
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;
+      background: var(--panel); border: 1px solid var(--border); border-radius: 16px; padding: 20px 24px;
+      margin-bottom: 20px;
+    }
+    .brand h1 { font-size: 1.45rem; letter-spacing: -0.02em; }
+    .brand p { color: var(--muted); font-size: 0.88rem; margin-top: 3px; }
+    .pill-group { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    .pill {
+      padding: 5px 12px; border-radius: 999px; font-size: 0.76rem; font-weight: 700;
+      background: rgba(16, 185, 129, 0.14); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.35);
+    }
+    .pill-blue {
+      background: rgba(56, 189, 248, 0.14); color: var(--accent); border-color: rgba(56, 189, 248, 0.35);
+    }
+    .btn-wallet {
+      background: linear-gradient(135deg, #6366f1, #8b5cf6); color: #fff; border: none;
+      padding: 9px 16px; border-radius: 10px; font-weight: 700; cursor: pointer; font-size: 0.84rem;
+    }
+
+    .kpi-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin-bottom: 22px;
+    }
+    .kpi {
+      background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 16px 18px;
+    }
+    .kpi .label { color: var(--muted); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; }
+    .kpi .val { font-size: 1.55rem; font-weight: 800; margin-top: 6px; color: var(--text); }
+    .kpi .sub { font-size: 0.78rem; color: #34d399; margin-top: 4px; }
+    .progress-bar {
+      height: 7px; background: #1e293b; border-radius: 999px; overflow: hidden; margin-top: 8px;
+    }
+    .progress-fill { height: 100%; background: linear-gradient(90deg, #38bdf8, #10b981); width: 0%; transition: width 0.4s ease; }
+
+    .main-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 18px; }
+    @media (max-width: 920px) { .main-grid { grid-template-columns: 1fr; } }
+
+    .card {
+      background: var(--panel); border: 1px solid var(--border); border-radius: 16px; padding: 20px;
+    }
+    .card h2 { font-size: 1.08rem; color: var(--accent); margin-bottom: 12px; }
+    .preset-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 18px; }
+    @media (max-width: 600px) { .preset-grid { grid-template-columns: 1fr; } }
+
+    .btn-preset {
+      text-align: left; padding: 12px 14px; border-radius: 11px; border: 1px solid var(--border);
+      background: var(--panel-alt); color: var(--text); cursor: pointer; transition: all 0.15s ease;
+    }
+    .btn-preset:hover { border-color: var(--accent); transform: translateY(-1px); }
+    .btn-preset.attack { border-color: rgba(239, 68, 68, 0.4); background: rgba(239, 68, 68, 0.07); }
+    .btn-preset.attack:hover { border-color: var(--danger); }
+    .btn-preset .p-title { font-weight: 700; font-size: 0.86rem; display: block; }
+    .btn-preset .p-desc { font-size: 0.75rem; color: var(--muted); margin-top: 3px; display: block; }
+
+    .form-row { margin-bottom: 11px; }
+    .form-row label { display: block; font-size: 0.78rem; color: var(--muted); margin-bottom: 4px; font-weight: 600; }
+    .form-row input, .form-row select {
+      width: 100%; padding: 9px 11px; border-radius: 8px; border: 1px solid #283a5e;
+      background: #080d1a; color: var(--text); font-size: 0.84rem; font-family: inherit;
+    }
+    .inline-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .btn-submit {
+      width: 100%; padding: 11px; border-radius: 10px; border: none; cursor: pointer;
+      background: linear-gradient(135deg, #0284c7, #10b981); color: #fff; font-weight: 700; font-size: 0.9rem;
+      margin-top: 6px;
+    }
+
+    .console-status {
+      padding: 10px 14px; border-radius: 10px; margin-bottom: 12px; font-size: 0.84rem; font-weight: 700;
+      display: none;
+    }
+    .status-ok { display: block; background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #34d399; }
+    .status-err { display: block; background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.45); color: #fca5a5; }
+
+    pre {
+      background: #060911; border: 1px solid #1b2842; border-radius: 10px; padding: 14px;
+      font-size: 0.77rem; color: #cbd5e1; overflow-x: auto; max-height: 510px; overflow-y: auto;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+    .footer-note {
+      margin-top: 22px; text-align: center; font-size: 0.76rem; color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <h1>🛡️ Sentinel PayFlow <span style="font-weight:400; color:#38bdf8;">× MultiHopper</span></h1>
+        <p>Non-Custodial Programmable Solana Settlement + Sub-Millisecond Tornado Cash / OFAC Pre-Flight Shield</p>
+      </div>
+      <div class="pill-group">
+        <span class="pill" id="health-pill">Sanctions DB: 175 Entities (O(1))</span>
+        <span class="pill pill-blue">Provider ID: SENTINELPAYFLOW1 (0.25% RevShare)</span>
+        <button class="btn-wallet" id="wallet-btn" onclick="connectSolanaWallet()">👻 Connect Phantom / Solflare</button>
+      </div>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="label">Qualified Volume Routed</div>
+        <div class="val" id="kpi-vol">$0.00</div>
+        <div class="progress-bar"><div class="progress-fill" id="vol-bar"></div></div>
+        <div class="sub" id="kpi-pct">0.00% of $100,000 Challenge Gate</div>
+      </div>
+      <div class="kpi">
+        <div class="label">Integrator 0.25% RevShare</div>
+        <div class="val" id="kpi-rev">$0.00</div>
+        <div class="sub">Tracked via [u8; 16] FeeSchedule PDA</div>
+      </div>
+      <div class="kpi">
+        <div class="label">CleanPass Routes Approved</div>
+        <div class="val" id="kpi-ok">0</div>
+        <div class="sub">Token-2022 Isolated (Zero Commingling)</div>
+      </div>
+      <div class="kpi">
+        <div class="label">Illicit / Wash Routes Blocked</div>
+        <div class="val" id="kpi-blk" style="color:#f87171;">0</div>
+        <div class="sub">Tornado Cash + OFAC + Anti-Farming</div>
+      </div>
+    </div>
+
+    <div class="main-grid">
+      <div class="card">
+        <h2>⚡ 1-Click Institutional Verification Scenarios (Judge Console)</h2>
+        <div class="preset-grid">
+          <button class="btn-preset" onclick="runPreset('agro_coffee_export')">
+            <span class="p-title">☕ $65,000 Agro Export Settlement</span>
+            <span class="p-desc">6 Hops • 90% Farmer / 8% Mill / 2% Fee</span>
+          </button>
+          <button class="btn-preset" onclick="runPreset('confidential_payroll')">
+            <span class="p-title">💼 $38,400 Confidential Payroll</span>
+            <span class="p-desc">5 Hops • 5 Engineers Multisend Batch</span>
+          </button>
+          <button class="btn-preset" onclick="runPreset('cpa_vendor_batch')">
+            <span class="p-title">📊 $24,750 CPA Vendor AP Batch</span>
+            <span class="p-desc">4 Hops • 3 Suppliers + SHA-256 Receipt</span>
+          </button>
+          <button class="btn-preset attack" onclick="runPreset('attack_tornado_bridge')">
+            <span class="p-title">🚨 Test Tornado Cash Bridge Taint</span>
+            <span class="p-desc">Blocks 0x722122df... Proxy V2 (&lt;0.2ms)</span>
+          </button>
+          <button class="btn-preset attack" onclick="runPreset('attack_solana_exploiter')">
+            <span class="p-title">🚨 Test Solana Exploiter Block</span>
+            <span class="p-desc">Blocks Wormhole Exploiter G2YxRa6w...</span>
+          </button>
+          <button class="btn-preset attack" onclick="runPreset('attack_circular_wash')">
+            <span class="p-title">🚨 Test Anti-Farming Self-Route</span>
+            <span class="p-desc">Blocks Circular Wash Volume Attempt</span>
+          </button>
+        </div>
+
+        <h2>🔧 Custom Non-Custodial MultiHopper Route Builder</h2>
+        <div class="form-row">
+          <label>Source Owner Wallet (Base58 Solana)</label>
+          <input id="f-src" value="7fUAJdStEuGbc3sM84cKRL6yYaaSstyLSU4ve5oovLS7">
+        </div>
+        <div class="form-row">
+          <label>Recipient Wallet (Base58 Solana)</label>
+          <input id="f-dst" value="DRpbCBMxVnDK7maPM5tGv6MvB3v1sRMC86PZ8okm21hy">
+        </div>
+        <div class="inline-2">
+          <div class="form-row">
+            <label>Amount (USDC)</label>
+            <input id="f-amt" type="number" step="0.01" value="1250.00">
+          </div>
+          <div class="form-row">
+            <label>Programmable Hops (3–10)</label>
+            <input id="f-hops" type="number" min="3" max="10" value="4">
+          </div>
+        </div>
+        <div class="form-row">
+          <label>Optional Cross-Chain Bridge Origin (EVM 0x... screened against 155 Tornado Cash/OFAC entries)</label>
+          <input id="f-bridge" placeholder="Leave blank for native Solana or paste 0x... bridge origin">
+        </div>
+        <button class="btn-submit" onclick="submitCustomRoute()">Screen with Sentinel Shield &amp; Prepare MultiHopper Route</button>
+      </div>
+
+      <div class="card">
+        <h2>📜 Live Telemetry, CleanPass SHA-256 &amp; MultiHopper RouteConfig</h2>
+        <div id="status-banner" class="console-status"></div>
+        <pre id="json-out">// Click any scenario on the left to inspect:
+// 1. Sub-millisecond Tornado Cash / OFAC / Anti-Wash screening
+// 2. CleanPass SHA-256 cryptographic attestation
+// 3. MultiHopper POST /api/v1/transfers payload &amp; [u8; 16] provider_id PDA
+// 4. Unsigned non-custodial Solana transaction bundle</pre>
+      </div>
+    </div>
+
+    <div class="footer-note">
+      Sentinel Fleet Technologies • Strictly Non-Custodial ($0.00 custody, zero private keys stored) • MultiHopper Core Program: <code>3jLoS2wbNgtKzieUUxwg6Xhdv6gbZkHDtPWA9ZAgspFh</code>
+    </div>
+  </div>
+
+  <script>
+    async function refreshStats() {
+      try {
+        const r = await fetch('/api/v1/stats');
+        const s = await r.json();
+        document.getElementById('kpi-vol').textContent = '$' + Number(s.total_routed_usd).toLocaleString('en-US', {minimumFractionDigits: 2});
+        document.getElementById('kpi-rev').textContent = '$' + Number(s.estimated_025_revshare_usd).toLocaleString('en-US', {minimumFractionDigits: 2});
+        document.getElementById('kpi-ok').textContent = s.routes_created;
+        document.getElementById('kpi-blk').textContent = s.routes_blocked_aml;
+        document.getElementById('kpi-pct').textContent = s.challenge_progress_pct + '% of $100,000 Challenge Gate';
+        document.getElementById('vol-bar').style.width = Math.min(100, parseFloat(s.challenge_progress_pct)) + '%';
+      } catch (e) {}
+    }
+
+    function showResult(ok, title, payload) {
+      const b = document.getElementById('status-banner');
+      b.className = 'console-status ' + (ok ? 'status-ok' : 'status-err');
+      b.textContent = title;
+      document.getElementById('json-out').textContent = JSON.stringify(payload, null, 2);
+      refreshStats();
+    }
+
+    async function runPreset(id) {
+      const resp = await fetch('/api/v1/routes/preset/' + id, { method: 'POST' });
+      const data = await resp.json();
+      if (resp.ok) {
+        showResult(true, '✅ CLEANPASS APPROVED & MULTIHOPPER ROUTE PREPARED (' + data.transfer_id + ')', data);
+      } else {
+        showResult(false, '🛑 FAIL-CLOSED SECURITY BLOCK — ' + (data.detail || 'Blocked'), data);
+      }
+    }
+
+    async function submitCustomRoute() {
+      const src = document.getElementById('f-src').value.trim();
+      const dst = document.getElementById('f-dst').value.trim();
+      const amtFloat = parseFloat(document.getElementById('f-amt').value || '0');
+      const hops = parseInt(document.getElementById('f-hops').value || '4', 10);
+      const bridge = document.getElementById('f-bridge').value.trim() || null;
+      const amtRaw = String(Math.round(amtFloat * 1000000));
+
+      const resp = await fetch('/api/v1/routes/create', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          sourceOwner: src,
+          destinations: [{ wallet: dst, amountRaw: amtRaw }],
+          hops: hops,
+          bridgeOriginEvm: bridge,
+          vertical: 'CUSTOM_CONSOLE_ROUTE'
+        })
+      });
+      const data = await resp.json();
+      if (resp.ok) {
+        showResult(true, '✅ CLEANPASS APPROVED & MULTIHOPPER ROUTE PREPARED (' + data.transfer_id + ')', data);
+      } else {
+        showResult(false, '🛑 FAIL-CLOSED SECURITY BLOCK — ' + (data.detail || 'Rejected'), data);
+      }
+    }
+
+    async function connectSolanaWallet() {
+      const provider = window.solana || (window.phantom && window.phantom.solana);
+      if (!provider) {
+        alert('Non-Custodial Signer Ready: Install Phantom or Solflare browser extension to populate your live Solana public key.');
+        return;
+      }
+      try {
+        const resp = await provider.connect();
+        const pubkey = resp.publicKey.toString();
+        document.getElementById('f-src').value = pubkey;
+        document.getElementById('wallet-btn').textContent = '🟢 ' + pubkey.slice(0, 6) + '...' + pubkey.slice(-4);
+      } catch (err) {
+        console.error(err);
+      }
+    }
+
+    refreshStats();
+  </script>
+</body>
+</html>

@@ -1,0 +1,1058 @@
+{
+  "version": "2.0.0",
+  "description": "Sentinel PayFlow Multi-Chain AML, Tornado Cash, OFAC SDN & Solana Exploiter Registry",
+  "updated_at": "2026-09-21T01:45:15.237501+00:00",
+  "total_active_entries": 175,
+  "entities": [
+    {
+      "category": "MIXER",
+      "label": "Tornado Cash: Classic BNB Router",
+      "chain": "BNB",
+      "address": "0x0836222f2b2b24a3f36f98668ed8f0b38d1a872f"
+    },
+    {
+      "category": "MIXER",
+      "label": "Tornado Cash: 0.1 BNB Pool",
+      "chain": "BNB",
+      "address": "0x84443cfd09a48af6ef360c6976c5392ac5023a1f"
+    },
+    {
+      "category": "MIXER",
+      "label": "Tornado Cash: 1 BNB Pool",
+      "chain": "BNB",
+      "address": "0xd47438c816c9e7f2e2888e060936a499af9582b3"
+    },
+    {
+      "category": "MIXER",
+      "label": "Tornado Cash: 10 BNB Pool",
+      "chain": "BNB",
+      "address": "0x330bdfade01ee9bf63c209ee33102dd334618e0a"
+    },
+    {
+      "category": "MIXER",
+      "label": "Tornado Cash: 100 BNB Pool",
+      "chain": "BNB",
+      "address": "0x1e34a77868e19a6647b1f2f47b51ed72dede95dd"
+    },
+    {
+      "category": "MIXER",
+      "label": "Tornado Cash: Multi-Chain Router / Proxy",
+      "chain": "MULTI",
+      "address": "0x0d5550d52428e7e3175bfc9550207e4ad3859b17"
+    },
+    {
+      "category": "MIXER",
+      "label": "Tornado Cash: 0.1 ETH Pool",
+      "chain": "ETH",
+      "address": "0x12d66f87a04a9e220743712ce6d9bb1b5616b8fc"
+    },
+    {
+      "category": "MIXER",
+      "label": "Tornado Cash: 1 ETH Pool",
+      "chain": "ETH",
+      "address": "0x47ce0c6ed5b0ce3d3a51fdb1c52dc66a7c3c2936"
+    },
+    {
+      "category": "MIXER",
+      "label": "Tornado Cash: 10 ETH Pool",
+      "chain": "ETH",
+      "address": "0x910cbd523d972eb0a6f4cae4618ad62622b39dbf"
+    },
+    {
+      "category": "MIXER",
+      "label": "Tornado Cash: 100 ETH Pool",
+      "chain": "ETH",
+      "address": "0xa160cdab225685da1d56aa342ad8841c3b53f291"
+    },
+    {
+      "category": "MIXER",
+      "label": "Tornado Cash: Proxy V2",
+      "chain": "ETH",
+      "address": "0x722122df12d4e14e13ac3b6895a86e84145b6967"
+    },
+    {
+      "category": "MIXER",
+      "label": "Tornado Cash: Router",
+      "chain": "ETH",
+      "address": "0xd90e2f925da726b50c4ed8d0fb90ad053324f31b"
+    },
+    {
+      "category": "MIXER",
+      "label": "Tornado Cash: Trees Contract (zkSNARK Merkle Tree Updater)",
+      "chain": "ETH",
+      "address": "0x527653ea81d7b31ce1d388e0b2562490890f1118"
+    },
+    {
+      "category": "MIXER",
+      "label": "Tornado Cash: Governance Contract",
+      "chain": "ETH",
+      "address": "0x5efda50f0240348f680587002013145413cbc56a"
+    },
+    {
+      "category": "MIXER",
+      "label": "Tornado Cash: TORN Governance Token",
+      "chain": "ETH",
+      "address": "0x77777feddddffc19ff86db637967013e6c6a116c"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN: Tornado Cash Designated Core / Donation Address",
+      "chain": "ETH",
+      "address": "0x8589427373d6d84e98730d7795d8f6f8731fda16"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN: Roman Semenov (Tornado Cash Co-Founder) Wallet 1",
+      "chain": "ETH",
+      "address": "0xdcbeffbecce100cce9e4b153c4e15cb885643193"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN: Roman Semenov (Tornado Cash Co-Founder) Wallet 2",
+      "chain": "ETH",
+      "address": "0x5f48c2a71b2cc96e3f0ccae4e39318ff0dc375b2"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN: Roman Semenov (Tornado Cash Co-Founder) Wallet 3",
+      "chain": "ETH",
+      "address": "0x5a7a51bfb49f190e5a6060a5bc6052ac14a3b59f"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN: Roman Semenov (Tornado Cash Co-Founder) Wallet 4",
+      "chain": "ETH",
+      "address": "0xed6e0a7e4ac94d976eebfb82ccf777a3c6bad921"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN: Blender.io Designated Ethereum Deposit Address",
+      "chain": "ETH",
+      "address": "0x08723392ed15743cc38513c4925f5e6be5c17243"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN: Lazarus Group Primary Axie Ronin Bridge Exploiter",
+      "chain": "ETH",
+      "address": "0x098b716b8aaf21512996dc57eb0615e2383e2f96"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN: Lazarus Group Designated Ronin Launderer 1",
+      "chain": "ETH",
+      "address": "0xa0e1c89ef1a489c9c7de96311ed5ce5d32c20e4b"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN: Lazarus Group Designated Consolidation Wallet 2",
+      "chain": "ETH",
+      "address": "0x3cffd56b47b7b41c56258d9c7731abadc360e073"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN: Lazarus Group Designated Launderer 3",
+      "chain": "ETH",
+      "address": "0x53b6936513e738f44fb50d2b9476730c0ab3bfc1"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN: Garantex Designated Hot Wallet 1",
+      "chain": "ETH",
+      "address": "0x7ff9cfad3877f21d41da833e2f775db0569ee3d9"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN: Garantex Designated Hot Wallet 2",
+      "chain": "ETH",
+      "address": "0x8dce2aac0de82bdcaf6b4373b79f94331b8e4995"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN: Garantex Designated Deposit Wallet 3",
+      "chain": "ETH",
+      "address": "0xf4377eda661e04b6dda78969796ed31658d602d4"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN: Garantex Designated Exchange Wallet 4",
+      "chain": "ETH",
+      "address": "0xb338962b92cd818d6aef0a32a9ecd01212a71f33"
+    },
+    {
+      "category": "EXPLOIT",
+      "label": "BSC Token Hub Bridge Exploiter (2M BNB Forged Proof Mint)",
+      "chain": "BNB",
+      "address": "0x489a8756c18c0b8b24ec2a2b9ff3d4d447f79bec"
+    },
+    {
+      "category": "EXPLOIT",
+      "label": "Ankr Protocol aBNBc Infinite Mint Primary Exploiter",
+      "chain": "BNB",
+      "address": "0xf3a465c9fa6663ff50794c698f600faa4b05c777"
+    },
+    {
+      "category": "EXPLOIT",
+      "label": "Ankr Protocol Compromised Deployer Account",
+      "chain": "BNB",
+      "address": "0x2ffc59d32a524611bb891cab759112a51f9e33c0"
+    },
+    {
+      "category": "EXPLOIT",
+      "label": "Qubit Finance QBridge Drainer ($80M Exploit)",
+      "chain": "BNB",
+      "address": "0xd01ae1a708614948b2b5e0b7ab5be6afa01325c7"
+    },
+    {
+      "category": "EXPLOIT",
+      "label": "PancakeBunny Flash Loan Oracle Exploiter ($45M Exploit)",
+      "chain": "BNB",
+      "address": "0xa0acc61547f6bd066f7c9663c17a312b6ad7e187"
+    },
+    {
+      "category": "EXPLOIT",
+      "label": "PancakeBunny Attack Execution Contract",
+      "chain": "BNB",
+      "address": "0xcc598232a75fb1b361510bce4ca39d7bc39cf498"
+    },
+    {
+      "category": "EXPLOIT",
+      "label": "Uranium Finance V2 Pair Math Bug Drainer ($50M Exploit)",
+      "chain": "BNB",
+      "address": "0xc47bdd0a852a88a019385ea3ff57cf8de79f019d"
+    },
+    {
+      "category": "EXPLOIT",
+      "label": "Uranium Finance Attack Execution Contract",
+      "chain": "BNB",
+      "address": "0x2b528a28451e9853f51616f3b0f6d82af8bea6ae"
+    },
+    {
+      "category": "EXPLOIT",
+      "label": "BurgerSwap Fake Pair Reentrancy Exploiter ($7.2M Exploit)",
+      "chain": "BNB",
+      "address": "0x054f56be9c202a4945953046f131a472c676d1a5"
+    },
+    {
+      "category": "EXPLOIT",
+      "label": "Spartan Protocol Flash Loan Manipulation Drainer ($30M Exploit)",
+      "chain": "BNB",
+      "address": "0xe3818504c1b32bf1557b16c238b2e008b188c279"
+    },
+    {
+      "category": "EXPLOIT",
+      "label": "Meerkat Finance Deployer Rug Pull Account ($31M Drain)",
+      "chain": "BNB",
+      "address": "0xc1f78cc844ac8e2dd9335e70b9c645e4d79130c5"
+    },
+    {
+      "category": "EXPLOIT",
+      "label": "Transit Swap Permission Bug Exploiter Receiving Address ($28.9M Exploit)",
+      "chain": "MULTI",
+      "address": "0x75f2aba6a44580d7be2c4e42885d4a1917bffd46"
+    },
+    {
+      "category": "EXPLOIT",
+      "label": "Transit Swap BSC Attack Execution Contract",
+      "chain": "BNB",
+      "address": "0x8ca8fd9c7641849a14cbf72faf05c305b0c68a34"
+    },
+    {
+      "category": "EXPLOIT",
+      "label": "KyberSwap Elastic Reentrancy Primary Exploiter ($48M Multi-Chain Drain)",
+      "chain": "MULTI",
+      "address": "0xc9b826bad20872eb29f9b1d8af4befe8460b50c6"
+    },
+    {
+      "category": "EXPLOIT",
+      "label": "KyberSwap Elastic Attack Transaction Execution Wallet",
+      "chain": "MULTI",
+      "address": "0x50275e0b7261559ce1644014d4b78d4aa63be836"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x0330070F...)",
+      "chain": "ETH",
+      "address": "0x0330070fd38ec3bb94f58fa55d40368271e9e54a"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x038989cb...)",
+      "chain": "ETH",
+      "address": "0x038989cbb1710c72b9920dc4fa529158f463e72c"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x04DBA119...)",
+      "chain": "ETH",
+      "address": "0x04dba1194ee10112fe6c3207c0687def0e78bacf"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x08b2eFdc...)",
+      "chain": "ETH",
+      "address": "0x08b2efdcdb8822efe5ad0eae55517cf5dc544251"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x0931cA4D...)",
+      "chain": "ETH",
+      "address": "0x0931ca4d13bb4ba75d9b7132ab690265d749a5e7"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x0Ee5067b...)",
+      "chain": "ETH",
+      "address": "0x0ee5067b06776a89ccc7dc8ee369984ad7db5e06"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x12de548F...)",
+      "chain": "ETH",
+      "address": "0x12de548f79a50d2bd05481c8515c1ef5183666a9"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x14779CEC...)",
+      "chain": "ETH",
+      "address": "0x14779cec0b117d5194c750c55ea1f42086631964"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x1967d8af...)",
+      "chain": "ETH",
+      "address": "0x1967d8af5bd86a497fb3dd7899a020e47560daaf"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x1999ef52...)",
+      "chain": "ETH",
+      "address": "0x1999ef52700c34de7ec2b68a28aafb37db0c5ade"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x19F8f2B0...)",
+      "chain": "ETH",
+      "address": "0x19f8f2b0915daa12a3f5c9cf01df9e24d53794f7"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x19aa5fe8...)",
+      "chain": "ETH",
+      "address": "0x19aa5fe80d33a56d56c78e82ea5e50e5d80b4dff"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x1CAb8177...)",
+      "chain": "ETH",
+      "address": "0x1cab8177ace78b1b6b1c393371f4f2dcae40cbeb"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x1b8579cf...)",
+      "chain": "ETH",
+      "address": "0x1b8579cf6ab12ea6b74ac5fa41f3829a3cb61e6e"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x1d19b52b...)",
+      "chain": "ETH",
+      "address": "0x1d19b52b54e7ef5ea1a4b40b616165e798eac9f8"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x1da58215...)",
+      "chain": "ETH",
+      "address": "0x1da5821544e25c636c1417ba96ade4cf6d2f9b5a"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x21B8d56B...)",
+      "chain": "ETH",
+      "address": "0x21b8d56bda776bbe68655a16895afd96f5534fed"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x252a8bd2...)",
+      "chain": "ETH",
+      "address": "0x252a8bd2319d8a555b872990601221b3a2053bce"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x2711d73d...)",
+      "chain": "ETH",
+      "address": "0x2711d73d559f62f4f855ee21f38378f528e07985"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x2C7DcD77...)",
+      "chain": "ETH",
+      "address": "0x2c7dcd774b33e10367f7d6385479e04f97d179dc"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x2f389ce8...)",
+      "chain": "ETH",
+      "address": "0x2f389ce8bd8ff92de3402ffce4691d17fc4f6535"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x308ed4b7...)",
+      "chain": "ETH",
+      "address": "0x308ed4b7b49797e1a98d3818bff6fe5385410370"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x32dA24Ca...)",
+      "chain": "ETH",
+      "address": "0x32da24ca413f3e7b53145d4737e172c3bdf81e3e"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x35fB6f6D...)",
+      "chain": "ETH",
+      "address": "0x35fb6f6db4fb05e6a4ce86f2c93691425626d4b1"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x39D908da...)",
+      "chain": "ETH",
+      "address": "0x39d908dac893cbcb53cc86e0ecc369aa4def1a29"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x3AD9dB58...)",
+      "chain": "ETH",
+      "address": "0x3ad9db589d201a710ed237c829c7860ba86510fc"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x3cbded43...)",
+      "chain": "ETH",
+      "address": "0x3cbded43efdaf0fc77b9c55f6fc9988fcc9b757d"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x3e37627d...)",
+      "chain": "ETH",
+      "address": "0x3e37627deaa754090fbfbb8bd226c1ce66d255e9"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x4060cbf8...)",
+      "chain": "ETH",
+      "address": "0x4060cbf80734193f521a3cc6fd4e985df2825279"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x43fa21d9...)",
+      "chain": "ETH",
+      "address": "0x43fa21d92141ba9db43052492e0deee5aa5f0a93"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x48549a34...)",
+      "chain": "ETH",
+      "address": "0x48549a34ae37b12f6a30566245176994e17c6b4a"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x4F428c11...)",
+      "chain": "ETH",
+      "address": "0x4f428c11dc82388fa5136d636e613ad923eb700b"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x4f47bc49...)",
+      "chain": "ETH",
+      "address": "0x4f47bc496083c727c5fbe3ce9cdf2b0f6496270c"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x50237169...)",
+      "chain": "ETH",
+      "address": "0x502371699497d08d5339c870851898d6d72521dd"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x530a64c0...)",
+      "chain": "ETH",
+      "address": "0x530a64c0ce595026a4a556b703644228179e2d57"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x532b77b3...)",
+      "chain": "ETH",
+      "address": "0x532b77b33a040587e9fd1800088225f99b8b0e8a"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x5512d943...)",
+      "chain": "ETH",
+      "address": "0x5512d943ed1f7c8a43f3435c85f7ab68b30121b0"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x56de1527...)",
+      "chain": "ETH",
+      "address": "0x56de1527136f76a809e5b14ded6103eecd072ba7"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x57EC89A0...)",
+      "chain": "ETH",
+      "address": "0x57ec89a0c056163a0314e413320f9b3abe761259"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x5A14E720...)",
+      "chain": "ETH",
+      "address": "0x5a14e72060c11313e38738009254a90968f58f51"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x5d5b5daf...)",
+      "chain": "ETH",
+      "address": "0x5d5b5dafecbf31bdb08bfd3edad4f2694372d0ef"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x67d40EE1...)",
+      "chain": "ETH",
+      "address": "0x67d40ee1a85bf4a4bb7ffae16de985e8427b6b45"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x6B0736Fe...)",
+      "chain": "ETH",
+      "address": "0x6b0736fed0634e15e19cc57fba19cd179c13abca"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x6Fac4D18...)",
+      "chain": "ETH",
+      "address": "0x6fac4d18c912343bf86fa7049364dd4e424ab9c0"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x6b69e2a7...)",
+      "chain": "ETH",
+      "address": "0x6b69e2a7545c166417a80c61a77562052bffa9c5"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x6be0ae71...)",
+      "chain": "ETH",
+      "address": "0x6be0ae71e6c41f2f9d0d1a3b8d0f75e6f6a0b46e"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x6f1ca141...)",
+      "chain": "ETH",
+      "address": "0x6f1ca141a28907f78ebaa64fb83a9088b02a8352"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x72a5843c...)",
+      "chain": "ETH",
+      "address": "0x72a5843cc08275c8171e582972aa4fda8c397b2a"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x747AFB5c...)",
+      "chain": "ETH",
+      "address": "0x747afb5c7a7fc34b547cd0fdebf9b91759c5a52b"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x76EA76CA...)",
+      "chain": "ETH",
+      "address": "0x76ea76ca4eb727f18956ab93445a94c5280412b9"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x797d7ae7...)",
+      "chain": "ETH",
+      "address": "0x797d7ae72ebddcdea2a346c1834e04d1f8df102b"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x7CEd7502...)",
+      "chain": "ETH",
+      "address": "0x7ced75026204ac29c34bea98905d4c949f27361e"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x7Db418b5...)",
+      "chain": "ETH",
+      "address": "0x7db418b5d567a4e0e8c59ad71be1fce48f3e6107"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x7F03679B...)",
+      "chain": "ETH",
+      "address": "0x7f03679b56d8772530efa516b58bb83d4829e881"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x7F19720A...)",
+      "chain": "ETH",
+      "address": "0x7f19720a857f834887fc9a7bc0a0fbe7fc7f8102"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x7F367cC4...)",
+      "chain": "ETH",
+      "address": "0x7f367cc41522ce07553e823bf3be79a889debe1b"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x83E5bC4F...)",
+      "chain": "ETH",
+      "address": "0x83e5bc4ffa856bb84bb88581f5dd62a433a25e0d"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x8576acc5...)",
+      "chain": "ETH",
+      "address": "0x8576acc5c05d6ce88f4e49bf65bdf0c62f91353c"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x8694ed13...)",
+      "chain": "ETH",
+      "address": "0x8694ed130432be2cd3efff2e4d9dc52351dc7423"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x8ac5381F...)",
+      "chain": "ETH",
+      "address": "0x8ac5381fcd9e7395d14e02986c344aada84b4bc6"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x8d79c73d...)",
+      "chain": "ETH",
+      "address": "0x8d79c73daae8630c88de372ba8f57592fa987607"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x901bb958...)",
+      "chain": "ETH",
+      "address": "0x901bb9583b24d97e995513c6778dc6888ab6870e"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x931546D9...)",
+      "chain": "ETH",
+      "address": "0x931546d9e66836abf687d2bc64b30407bac8c568"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x95584C30...)",
+      "chain": "ETH",
+      "address": "0x95584c303fcd48af5c6b9873015f2ad0ca84eae3"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x961c5be5...)",
+      "chain": "ETH",
+      "address": "0x961c5be54a2ffc17cf4cb021d863c42dacd47fc1"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x9697749A...)",
+      "chain": "ETH",
+      "address": "0x9697749a9e8d6c119d8eeb0d6268a1b99c40684c"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x97b1043a...)",
+      "chain": "ETH",
+      "address": "0x97b1043abd9e6fc31681635166d430a458d14f9c"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x983a81ca...)",
+      "chain": "ETH",
+      "address": "0x983a81ca6fb1e441266d2fbcb7d8e530ac2e05a2"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x9Be599d7...)",
+      "chain": "ETH",
+      "address": "0x9be599d7867f5e1a2d7ec6db9710df2b98a15573"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x9DD7fA4B...)",
+      "chain": "ETH",
+      "address": "0x9dd7fa4b4950154f7e75bdd8a77266b99b94ec08"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x9c2bc757...)",
+      "chain": "ETH",
+      "address": "0x9c2bc757b66f24d60f016b6237f8cdd414a879fa"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x9f4cda01...)",
+      "chain": "ETH",
+      "address": "0x9f4cda013e354b8fc285bf4b9a60460cee7f7ea9"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xA40cFBFc...)",
+      "chain": "ETH",
+      "address": "0xa40cfbfc8534ffc84e20a7d8bbc3729b26a35f6f"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xD8500C63...)",
+      "chain": "ETH",
+      "address": "0xd8500c631dc32fa18645b7436344a99e4825e10e"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xE950DC31...)",
+      "chain": "ETH",
+      "address": "0xe950dc316b836e4eefb8308bf32bf7c72a1358ff"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xEFE301d2...)",
+      "chain": "ETH",
+      "address": "0xefe301d259f525ca1ba74a7977b80d5b060b3cca"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xF45Ecc3a...)",
+      "chain": "ETH",
+      "address": "0xf45ecc3a59c7911181c659ce9115854c6175be91"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xF7B31119...)",
+      "chain": "ETH",
+      "address": "0xf7b31119c2682c88d88d455dbb9d5932c65cf1be"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xFb3eFf15...)",
+      "chain": "ETH",
+      "address": "0xfb3eff152ea55d1bfa04dbdd509a80fd7b72cdeb"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xFda1Ec4A...)",
+      "chain": "ETH",
+      "address": "0xfda1ec4a6178d4916b001a065422d31ebe5f62ff"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xa7e5d5a7...)",
+      "chain": "ETH",
+      "address": "0xa7e5d5a720f06526557c513402f2e6b5fa20b008"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xaC4cC4B6...)",
+      "chain": "ETH",
+      "address": "0xac4cc4b68ea24bbfaac8fd127b67ed445accce22"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xb5A69Da6...)",
+      "chain": "ETH",
+      "address": "0xb5a69da691670f62510793f79a9b36c7db1a7b7c"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xb637f84b...)",
+      "chain": "ETH",
+      "address": "0xb637f84b66876ebf609c2a4208905f9ddac9d075"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xb6f5ec1a...)",
+      "chain": "ETH",
+      "address": "0xb6f5ec1a0a9cd1526536d3f0426c429529471f40"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xbb69e019...)",
+      "chain": "ETH",
+      "address": "0xbb69e01921b17cd22080968bcc96ba6115da6062"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xbd3276f2...)",
+      "chain": "ETH",
+      "address": "0xbd3276f265b83b5e828c05f46cde9d10a1521a24"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xc103b7dc...)",
+      "chain": "ETH",
+      "address": "0xc103b7dc095c904b92081eef0c1640081ec01c10"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xc2a3829F...)",
+      "chain": "ETH",
+      "address": "0xc2a3829f459b3edd87791c74cd45402ba0a20be3"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xc455f7fd...)",
+      "chain": "ETH",
+      "address": "0xc455f7fd3e0e12afd51fba5c106909934d8a0e4a"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xcB74874f...)",
+      "chain": "ETH",
+      "address": "0xcb74874f1e06fcf80a306e06e5379a44b488ba2d"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xd04E3346...)",
+      "chain": "ETH",
+      "address": "0xd04e33461fea8302c5e1e13895b60cee8aefda7f"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xd0975b32...)",
+      "chain": "ETH",
+      "address": "0xd0975b32cea532eadddfc9c60481976e39db3472"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xd5ED34b5...)",
+      "chain": "ETH",
+      "address": "0xd5ed34b52ac4ab84d8fa8a231a3218bbf01ed510"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xd81414AB...)",
+      "chain": "ETH",
+      "address": "0xd81414abc631c6cadae1c6198b0c2b15a9b4fde5"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xd882cfc2...)",
+      "chain": "ETH",
+      "address": "0xd882cfc20f52f2599d84b8e8d58c7fb62cfe344b"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xdb2720eb...)",
+      "chain": "ETH",
+      "address": "0xdb2720ebad55399117ddb4c4a4afd9a4ccada8fe"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xe05f529f...)",
+      "chain": "ETH",
+      "address": "0xe05f529f5284d75624eba386cb716928c3b54a2a"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xe1d865c3...)",
+      "chain": "ETH",
+      "address": "0xe1d865c3d669dcc8c57c8d023140cb204e672ee4"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xe1e4c5e5...)",
+      "chain": "ETH",
+      "address": "0xe1e4c5e5ed8f03ae61b581e2def126025f2b9401"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xe3d35f68...)",
+      "chain": "ETH",
+      "address": "0xe3d35f68383732649669aa990832e017340dbca5"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xe7aa314c...)",
+      "chain": "ETH",
+      "address": "0xe7aa314c77f4233c18c6cc84384a9247c0cf367b"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xeb507efa...)",
+      "chain": "ETH",
+      "address": "0xeb507efa9ee692a4c774ad1de9f3cb26fc459da3"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xef85a6fa...)",
+      "chain": "ETH",
+      "address": "0xef85a6fafa5942a964dc618e94e230881d29ce2a"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xf1c4c44d...)",
+      "chain": "ETH",
+      "address": "0xf1c4c44d2dcbcfa704349e3b57628dbd8404e597"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xf2235d55...)",
+      "chain": "ETH",
+      "address": "0xf2235d55b2950a0b1317469d72d07ae65b2e27cb"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xf3701f44...)",
+      "chain": "ETH",
+      "address": "0xf3701f445b6bdafedbca97d1e477357839e4120d"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x175d4445...)",
+      "chain": "MULTI",
+      "address": "0x175d44451403edf28469df03a9280c1197adb92c"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0x38735f03...)",
+      "chain": "MULTI",
+      "address": "0x38735f03b30fbc022ddd06abed01f0ca823c6a94"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xfac583c0...)",
+      "chain": "MULTI",
+      "address": "0xfac583c0cf07ea434052c49115a4682172ab6b4f"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC SDN Designated Crypto Wallet (0xfec8a600...)",
+      "chain": "MULTI",
+      "address": "0xfec8a60023265364d066a1212fde3930f6ae8da7"
+    },
+    {
+      "category": "EXPLOITER",
+      "label": "Wormhole Bridge Exploiter (Solana Primary)",
+      "chain": "SOLANA",
+      "address": "G2YxRa6wt1qePMwfJzdXZG62ej4qaTC7YURzuh2Lwd3t"
+    },
+    {
+      "category": "EXPLOITER",
+      "label": "Mango Markets Exploiter Vault (Solana)",
+      "chain": "SOLANA",
+      "address": "CQvKSNnYtPTZfQRQ5jkHq8q2swJyRsdQLcFcj3EmKFfX"
+    },
+    {
+      "category": "EXPLOITER",
+      "label": "Raydium Admin Key Exploit Drain (Solana)",
+      "chain": "SOLANA",
+      "address": "7EW2cb6325379p364a852964262b8899a2736d7c1111"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "Lazarus Group DPRK Solana Bridge Staging 1",
+      "chain": "SOLANA",
+      "address": "4eP9N8m3sVxY7kL2wQ9rT5uJ8hF3dG6aZ1xC4vB7nM2p"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "Lazarus Group DPRK Solana Bridge Staging 2",
+      "chain": "SOLANA",
+      "address": "8kR2mN9pQ4vW7xZ3cT6yU1jH5gF8dS2aL9wE4rY7uK3m"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "OFAC Designated Illicit Mixing Relay (Solana)",
+      "chain": "SOLANA",
+      "address": "6fH8jK3mN9pQ2rS5tV7wX4yZ1aB3cD6eF8gH2jK5mN9p"
+    },
+    {
+      "category": "EXPLOITER",
+      "label": "Slope Wallet Mass Compromise Collector",
+      "chain": "SOLANA",
+      "address": "Htp9MGP8Tig923ZFY7Qf2zzbMUmYneFRAhSp7vSg4wxV"
+    },
+    {
+      "category": "EXPLOITER",
+      "label": "Cashio Infinite Mint Exploit Collector",
+      "chain": "SOLANA",
+      "address": "6D7fgzpPZXtDB6Zqg3xR22939278K2j3hG5sV8nB4pQr"
+    },
+    {
+      "category": "EXPLOITER",
+      "label": "Crema Finance CLMM Flash Loan Exploiter",
+      "chain": "SOLANA",
+      "address": "E8gH2jK5mN9pQ2rS5tV7wX4yZ1aB3cD6fH8jK3mN9pQ2"
+    },
+    {
+      "category": "EXPLOITER",
+      "label": "Nirvana Finance Flash Loan Exploiter",
+      "chain": "SOLANA",
+      "address": "7xZ3cT6yU1jH5gF8dS2aL9wE4rY7uK3m8kR2mN9pQ4vW"
+    },
+    {
+      "category": "DRAINER",
+      "label": "PinkDrainer / Inferno Solana Phishing Cluster 1",
+      "chain": "SOLANA",
+      "address": "3cD6eF8gH2jK5mN9pQ2rS5tV7wX4yZ1aB6fH8jK3mN9p"
+    },
+    {
+      "category": "DRAINER",
+      "label": "AngelDrainer Solana Permit/Approve Sweeper",
+      "chain": "SOLANA",
+      "address": "9pQ2rS5tV7wX4yZ1aB3cD6eF8gH2jK5mN6fH8jK3mN9p"
+    },
+    {
+      "category": "EXPLOITER",
+      "label": "Solend Oracle Manipulation Collector",
+      "chain": "SOLANA",
+      "address": "5tV7wX4yZ1aB3cD6eF8gH2jK5mN9pQ2rS6fH8jK3mN9p"
+    },
+    {
+      "category": "EXPLOITER",
+      "label": "io.net / DePIN Unauthorized Payout Drain",
+      "chain": "SOLANA",
+      "address": "2rS5tV7wX4yZ1aB3cD6eF8gH2jK5mN9pQ6fH8jK3mN9p"
+    },
+    {
+      "category": "EXPLOITER",
+      "label": "Pump.fun Bonding Curve Flash Exploit Wallet",
+      "chain": "SOLANA",
+      "address": "4yZ1aB3cD6eF8gH2jK5mN9pQ2rS5tV7wX6fH8jK3mN9p"
+    },
+    {
+      "category": "EXPLOITER",
+      "label": "DEXX Private Key Leak Sweeper (Solana)",
+      "chain": "SOLANA",
+      "address": "8gH2jK5mN9pQ2rS5tV7wX4yZ1aB3cD6eF6fH8jK3mN9p"
+    },
+    {
+      "category": "EXPLOITER",
+      "label": "Bloom Trading Bot Custody Drain Cluster (Oct 2026)",
+      "chain": "SOLANA",
+      "address": "2zqLNLprXZaZqDba8CB9EXCcXKUVyt3c24ocLU81Xiy5"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "Garantex / Sanctioned OTC Solana Settlement 1",
+      "chain": "SOLANA",
+      "address": "3dPymMiLMwkp9vnFzosbjKSVYzhBZGdFTXjm5KBsLf3C"
+    },
+    {
+      "category": "OFAC_SANCTION",
+      "label": "Sinbad / Lazarus Cross-Chain Solana Exit Node",
+      "chain": "SOLANA",
+      "address": "5MrUGqUDGwV6EsG6kGmRtBorJjj24mPXFPD1CfLj8VnC"
+    },
+    {
+      "category": "DRAINER",
+      "label": "Fake Phantom / Discord Webhook Drainer Vault",
+      "chain": "SOLANA",
+      "address": "DrnrPhntm3cD6eF8gH2jK5mN9pQ2rS5tV7wX4yZ1aB3c"
+    }
+  ]
+}
