@@ -224,6 +224,7 @@ class PayFlowEngine:
             subtotal_raw += amt_raw
             destinations.append({"wallet": item["recipient"], "amountRaw": str(amt_raw)})
 
+        # Note: source_owner must fund (subtotal_raw + fee_raw) in total_amount_raw
         fee_raw = (subtotal_raw * SENTINEL_GATEWAY_FEE_BPS) // 10_000
         if fee_raw > 0 and self.treasury_wallet != employer_wallet:
             destinations.append({"wallet": self.treasury_wallet, "amountRaw": str(fee_raw)})
@@ -291,6 +292,7 @@ class PayFlowEngine:
             subtotal_raw += amt_raw
             destinations.append({"wallet": inv["vendor_wallet"], "amountRaw": str(amt_raw)})
 
+        # Note: source_owner must fund (subtotal_raw + fee_raw) in total_amount_raw
         fee_raw = (subtotal_raw * SENTINEL_GATEWAY_FEE_BPS) // 10_000
         if fee_raw > 0 and self.treasury_wallet != corporate_treasury_wallet:
             destinations.append({"wallet": self.treasury_wallet, "amountRaw": str(fee_raw)})

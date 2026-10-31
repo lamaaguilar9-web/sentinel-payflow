@@ -51,6 +51,7 @@ class MultiHopperClient:
         self.base_url = (base_url or MULTIHOPPER_BASE_URL).rstrip("/")
         self.timeout_seconds = timeout_seconds
         self._sandbox_store: Dict[str, Dict[str, Any]] = {}
+        self._last_known_protocol_fee_bps: int = 100  # Cached from live /estimate when available
 
     @property
     def is_live_api_configured(self) -> bool:
@@ -97,6 +98,8 @@ class MultiHopperClient:
                     )
                     if resp.status_code in (200, 201):
                         data = resp.json()
+                        if "protocolFeeBps" in data:
+                            self._last_known_protocol_fee_bps = int(data["protocolFeeBps"])
                         data["execution_mode"] = f"LIVE_{MULTIHOPPER_ENV.upper()}_API"
                         return data
                     logger.warning(
@@ -107,12 +110,13 @@ class MultiHopperClient:
             except Exception as exc:
                 logger.warning("Live MultiHopper estimate network fallback: %s", exc)
 
-        # Deterministic protocol-accurate fee & revshare calculation
-        protocol_fee_bps = 100  # 1.00% standard full-fee tier
+        # Deterministic protocol-accurate fee & revshare calculation (uses cached protocolFeeBps)
+        protocol_fee_bps = self._last_known_protocol_fee_bps
         protocol_fee_raw = (int(amount_raw) * protocol_fee_bps) // 10_000
         integrator_revshare_raw = (
             int(amount_raw) * MULTIHOPPER_REVSHARE_BPS
         ) // 10_000  # 0.25% lifetime integrator share
+        # Conservative upper-bound Solana network + ATA rent estimate; live API overrides this
         network_lamports = (hops * 15_000) + (destination_count * 2_039_280)
 
         return {
@@ -262,6 +266,7 @@ class MultiHopperClient:
         if not record:
             raise KeyError(f"Transfer ID '{transfer_id}' not found.")
 
+        # SIMULATED: replace with real unsigned VersionedTransaction from MultiHopper prepare endpoint in production
         unsigned_ix_envelope = {
             "programId": MULTIHOPPER_CORE_PROGRAM_ID,
             "transferId": transfer_id,
